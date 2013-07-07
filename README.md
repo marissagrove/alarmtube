@@ -1,7 +1,7 @@
-alarmtube
+Alarmtube
 =========
 
-An alarmclock that plays Youtube videos.
+An alarm clock that plays Youtube videos.
 
 How to use
 ----------
@@ -11,7 +11,7 @@ Copy and paste this into your terminal:
 	cd alarmtube
 	python -m SimpleHTTPServer
 
-Then open your browser and go to http://localhost:8080
+Then open your browser and go to [http://localhost:8000](http://localhost:8000)
 
 License
 -------
@@ -23,4 +23,4 @@ All code copyright Marissa Grove 2013 unless otherwise stated.
 
 Thank You
 ---------
-Thank you to JavaScriptKit http://www.javascriptkit.com/script/script2/alarm.shtml for the initial alarm code.
+Thank you to [JavaScriptKit](http://www.javascriptkit.com/script/script2/alarm.shtml) for the initial alarm code.
