@@ -5,6 +5,10 @@ An alarm clock that plays Youtube videos.
 
 How to use
 ----------
+Just visit the [Alarmtube website](http://marissagrove.github.io/alarmtube)
+
+How to develop
+--------------
 Copy and paste this into your terminal:
 
     git clone https://github.com/marissagrove/alarmtube.git
