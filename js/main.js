@@ -2,6 +2,7 @@ var shuffleArray = function(arg) {
 	return arg.sort(function(a,b){ return (Math.random() * 100) < 50})
 };
 
+// jsalarm originally from http://www.javascriptkit.com/script/script2/alarm.shtml
 var jsalarm={
 	padfield:function(f){
 		return (f<10)? "0"+f : f
