@@ -7,7 +7,7 @@ How to use
 ----------
 Copy and paste this into your terminal:
 
-    git pull https://github.com/marissagrove/alarmtube
+    git pull https://github.com/marissagrove/alarmtube.git
     python -m SimpleHTTPServer
 
 Then open your browser and go to http://localhost:8080
