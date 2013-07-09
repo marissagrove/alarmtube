@@ -19,7 +19,7 @@ Then open your browser and go to [http://localhost:8000](http://localhost:8000)
 
 License
 -------
-I don't know yet.
+MIT
 
 Copyright
 ---------
