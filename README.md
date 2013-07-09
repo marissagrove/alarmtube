@@ -5,7 +5,7 @@ An alarm clock that plays Youtube videos.
 
 How to use
 ----------
-Just visit the [Alarmtube website](http://marissagrove.github.io/alarmtube)
+Just visit the [Alarmtube website](http://alarmtube.marissagrove.com/)
 
 How to develop
 --------------
@@ -19,7 +19,7 @@ Then open your browser and go to [http://localhost:8000](http://localhost:8000)
 
 License
 -------
-I don't know yet.
+MIT
 
 Copyright
 ---------

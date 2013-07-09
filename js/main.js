@@ -2,7 +2,7 @@ var shuffleArray = function(arg) {
 	return arg.sort(function(a,b){ return (Math.random() * 100) < 50})
 };
 
-// jsalarm originally from http://www.javascriptkit.com/script/script2/alarm.shtml
+// JSalarm code originally from http://www.javascriptkit.com/script/script2/alarm.shtml
 var jsalarm={
 	padfield:function(f){
 		return (f<10)? "0"+f : f
@@ -70,17 +70,21 @@ var jsalarm={
 
 var player = null;
 
-var playerHandle = null;
-var onYouTubePlayerReady = function(playerid) { 
-	playerHandle = playerid; console.log("youtubeplayerloaded,the player id is: " + playerid);
-	player=document.getElementById("ytapiplayer");
-	player.pauseVideo();
+var onYouTubeIframeAPIReady = function() {
+  player = new YT.Player('ytapiplayer', {
+    height: '356',
+    width:  '425',
+    videoId: 'JW5meKfy3fY',
+    events: {
+      'onReady': onVideosReady
+    }
+  });
+  player.cuePlaylist
 };
 
-var params = { allowScriptAccess: "always" };
-var atts = { id: "ytapiplayer" };
-swfobject.embedSWF("http://www.youtube.com/v/KQ5yjAH7bxM?enablejsapi=1&playerapiid=ytplayer&version=3",
-	"ytapiplayer", "425", "356", "8", null, null, params, atts);
+var onVideosReady = function(event) {
+  player = event.target;
+};
 
 var setAppropriateVolume = function() {
 	var playerCurrentTime = player.getCurrentTime();
@@ -92,16 +96,24 @@ var setAppropriateVolume = function() {
 
 var delta = 0.005;
 
-var x = function() { 
-	if (Math.round(parseFloat(l.style.opacity) * 100) >= 100) {
+// Be sure to set element's opacity to a number before calling
+// fadeInAndOut on it.
+//
+/* Example usage:
+   setInterval(function(){
+     fadeInAndOut(document.getElementById('ytapiplayer'))
+     }, 10)
+*/
+var fadeInAndOut = function(element) {
+	if (Math.round(parseFloat(element.style.opacity) * 100) >= 100) {
 		delta = -0.005;
 	};
 
-	if (Math.round(parseFloat(l.style.opacity) * 100) <= 0) {
+	if (Math.round(parseFloat(element.style.opacity) * 100) <= 0) {
 		delta = 0.005;
 	};
 
-	l.style.opacity = parseFloat(l.style.opacity) + delta;
+	element.style.opacity = parseFloat(element.style.opacity) + delta;
 };
 
 window.onload = function() {
