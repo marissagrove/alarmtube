@@ -21,6 +21,8 @@ License
 -------
 MIT
 
+See LICENSE for more details
+
 Copyright
 ---------
 All code copyright Marissa Grove 2013 unless otherwise stated.
